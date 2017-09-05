@@ -57,3 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
+# tern_for_vim
+.tern-project
