@@ -1,0 +1,27 @@
+{
+  "name": "ntest",
+  "version": "1.0.0",
+  "description": "NA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+      "name": "Kevin.Y.Yu",
+      "email": "bbcyyb@gmail.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^2.8.0",
+    "di": "git+https://github.com/RackHD/di.js.git",
+    "lodash": "^3.0.2",
+    "ejs": "^2.0.8",
+    "nconf": "^0.7.1",
+    "node-uuid": "^1.4.2",
+    "stack-trace": "0.0.9",
+    "validate.js": "^0.3.2",
+    "validator": "^3.27.0",
+    "waterline": "^0.10.21",
+    "waterline-criteria": "^0.11.1"   
+  }
+}
