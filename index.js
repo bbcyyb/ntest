@@ -36,6 +36,32 @@ var PromiseCall = function() {
         }
     };
 
+    this.chainFuncV2 = function() {
+        console.log("=====================>chainFuncV2...");
+        console.log(0);
+        Promise.resolve()
+            .then(function() {
+                console.log(1);
+                return Promise.resolve()
+                    .then(function() {
+                        console.log(11);
+                        return Promise.resolve()
+                            .then(() => {
+                                console.log(111);
+                                return 111;
+                            });
+                    });
+            })
+            .then(function(data) {
+                console.log(2);
+                console.log(data);
+            })
+            .then(function() {
+                console.log(3);
+            });
+        console.log("<====================");
+    };
+
     this.allFunc = function() {
         console.log("====================>allFunc...");
         var parallelOne = function() {
@@ -180,7 +206,8 @@ var PromiseCall = function() {
 
 var obj = new PromiseCall();
 // obj.chainFunc();
-obj.chainFunc(obj.chainFunc);
+obj.chainFuncV2();
+// obj.chainFunc(obj.chainFunc);
 // obj.allFunc();
 // obj.anyAndSomeFunc();
 // obj.eachFunc();
